@@ -9,8 +9,11 @@ module.exports = class FmJsonResponse {
     hasForm = false;
     hasContent = false;
 
-    setCode(code) {
+    setCode(code, message = null) {
         this.code = code;
+
+        if (message) this.addMessage(message);
+
         return this;
     }
 
@@ -18,8 +21,11 @@ module.exports = class FmJsonResponse {
         return this.code;
     }
 
-    setError(error) {
+    setError(error, message = null) {
         this.error = error;
+
+        if (message) this.addMessage(message);
+
         return this;
     }
 
@@ -73,16 +79,10 @@ module.exports = class FmJsonResponse {
         return this.form[field] ? this.form[field] : null;
     }
 
-    setFieldError(field, error, message) {
-        if (typeof message === 'undefined') {
-            message = null;
-        }
-
+    setFieldError(field, error, message = null) {
         this.form[field].error = error;
 
-        if (message) {
-            this.addFieldMessage(field, message);
-        }
+        if (message) this.addFieldMessage(field, message);
 
         return this;
     }
