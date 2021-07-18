@@ -1,0 +1,23 @@
+{
+  "name": "fm-json-response",
+  "version": "1.1.0",
+  "description": "Um modulo para retornar um JSON em sua aplicação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmlimao/fm-json-response.git"
+  },
+  "keywords": [
+    "json",
+    "response"
+  ],
+  "author": "Leandro Macedo <fmlimao@gmail.com> (http://github.com/fmlimao)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fmlimao/fm-json-response/issues"
+  },
+  "homepage": "https://github.com/fmlimao/fm-json-response#readme"
+}
